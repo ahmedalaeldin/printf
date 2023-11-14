@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 
 /**
  * get_specifier - finds the format fune
@@ -44,9 +44,9 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
  * @ap: argument pointer
  * @params: the parameters struct
  *
- * Retunr: the number of bytes printed 
+ * Return: the number of bytes printed
 */
-int get_flag(char *s, params_t *params)
+int get_print_func(char *s, va_list ap,  params_t *params)
 {
 	int (*f)(va_list, params_t *) = get_specifier(s);
 
@@ -115,14 +115,14 @@ int get_modifier(char *s, params_t *params)
  * @s: the format string
  * @params: the parameters struct
  * @ap: the argument pointer
- * 
+ *
  * Return: new pointer
 */
 cahr *get_width(char *s, params_t *params, va_list ap)
 {
 	int d = 0;
 
-	if(*s == '*')
+	if (*s == '*')
 	{
 		d = va_arg(ap, int);
 		s++,
