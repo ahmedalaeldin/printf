@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print - prints anything.
+ * _printf - prints anything.
  * @format: the format string.
  * _printf - prints anything
  * @format: the format string
