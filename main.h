@@ -67,7 +67,7 @@ typedef struct specifier
 
 /* _put.c module */
 int _puts(char *str);
-int _putchar(inbt c);
+int _putchar(int c);
 
 /* print_functions.c module */
 int print_char(va_list ap, params_t *params);
@@ -86,12 +86,12 @@ int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
-char *get_width(char *s, pareams_t *params, va_list ap);
+char *get_width(char *s, params_t *params, va_list ap);
 
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
 int print_HEX(va_list ap, params_t *params);
-int print_binaary(va_list ap, params_t *params);
+int print_binary(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
