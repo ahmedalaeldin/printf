@@ -73,7 +73,7 @@ if  (params->zero_flag && !params->minus_flag)
 pad_char = '0';
 neg = neg2 = (!params->unsign && *str == '-');
 if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
-str++
+str++;
 else
 neg = 0;
 if ((params->plus_flag && !neg2) ||
@@ -88,7 +88,7 @@ else if (!params->plus_flag && params->space_flag && !neg2 &&
 n += _putchar('+');
 while (i++ < params->width)
 n += _putchar(pad_char);
-if (neg && pad_cahr == ' ')
+if (neg && pad_char == ' ')
 n += _putchar(' ');
 if (params->plus_flag && !neg2 && pad_char == ' ' && !params->unsign)
 	n += _putchar('+');

@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * print_from_to - prints a range of char addresses

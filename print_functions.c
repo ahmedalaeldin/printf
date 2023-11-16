@@ -52,7 +52,7 @@ int print_int(va_list ap, params_t *params)
 int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
-	unsigned int pad = 0, sum = 0, i = 0, j;
+	unsigned int pad = 0, sum = 0, i = 0;
 
 	(void)params;
 	switch ((int)(!str))
@@ -102,7 +102,8 @@ int print_S(va_list ap, params_t *params)
 	int sum = 0;
 
 	if ((int)(!str))
-		retrun(_puts(NULL_STRING));
+		return (_puts(NULL_STRING));
+
 	for (; *str; str++)
 	{
 		if ((*str > 0 && *str < 32) || *str >= 127)
