@@ -1,4 +1,5 @@
-include "main.h"
+#include "main.h"
+#include <stdarg.h>
 
 /**
  * get_specifier - finds the format fune
@@ -13,7 +14,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"d", print_int},
 		{"i", print_int},
 		{"S", print_string},
-		{"%", print_percemt},
+		{"%", print_percent},
 		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
@@ -118,7 +119,7 @@ int get_modifier(char *s, params_t *params)
  *
  * Return: new pointer
 */
-cahr *get_width(char *s, params_t *params, va_list ap)
+char *get_width(char *s, params_t *params, va_list ap)
 {
 	int d = 0;
 
